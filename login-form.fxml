@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-font-family: Arial;" styleClass="container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-padding: 10px; -fx-spacing: 5px;" styleClass="form">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 26px;" styleClass="form__heading" text="Login" />
+            <VBox style="-fx-padding: 5px; -fx-spacing: 2px;" styleClass="form__field">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" styleClass="field__label" text="Username" />
+                  <TextField prefHeight="30.0" styleClass="field__input" />
+               </children>
+            </VBox>
+            <VBox style="-fx-padding: 5px; -fx-spacing: 2px;" styleClass="form__field">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" styleClass="field__label" text="Password" />
+                  <PasswordField prefHeight="30.0" styleClass="field__input" VBox.vgrow="SOMETIMES" />
+               </children>
+            </VBox>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" style="-fx-padding: 5px; -fx-background-color: red; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-font-family: Roboto Lt; -fx-background-radius: 10px; -fx-padding: 2px;" styleClass="field__error" text="&lt;error&gt;" visible="false" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: dodgerblue; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 10px;" text="Login" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
