@@ -25,7 +25,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 // Create additional Routes below
 Route::get('/register', [RegisterController::class, 'create']);
@@ -34,7 +34,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [AuthController::class, 'create'])->name('login');
 Route::post('/login', [AuthController::class, 'store']);
 
-Route::get('/clients/add', [ClientController::class, 'index'])->middleware('auth');
-Route::post('/clients', [ClientController::class, 'create'])->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::get('/clients/add', [ClientController::class, 'index']);
+    Route::post('/clients', [ClientController::class, 'create']);
+});
 
 Route::get('/logout', [AuthController::class, 'logout']);
