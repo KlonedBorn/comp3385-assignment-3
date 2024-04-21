@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PropertiesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// Create additional Routes below
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/about', [AboutController::class, 'about']);
+Route::get('/properties/create', [PropertiesController::class, 'create']);
+Route::post('/properties/create', [PropertiesController::class, 'store'])->name('properties.create');
